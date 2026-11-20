@@ -1,0 +1,21 @@
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+    num1 NUMBER := 300;
+    num2 NUMBER := 358;
+    num3 NUMBER := 3588;
+
+BEGIN
+    IF num1 >= num2 AND num1 >= num3 THEN
+        DBMS_OUTPUT.PUT_LINE('El numero mayor es: ' || num1);
+
+    ELSIF --YA QUE SON DOS SENTENCIAS QUE SE DEBEN REALIZAR O VERIFICAFAR PARA LLEGAR AL RESULTADO 
+        num2 >= num1 AND num2 >= num3 THEN
+        DBMS_OUTPUT.PUT_LINE('El numero mayor es: ' || num2);
+
+    ELSE --COMO SE TEMRINA AQUI YA NO ES NECESARIO VOLVER A PONER ELSIF, CON SOLO PONER ELSE DAS POR FINALIZADOR LA SENTENCIA
+        DBMS_OUTPUT.PUT_LINE('El numero mayor es: ' || num3);
+    END IF;
+END;
+/
